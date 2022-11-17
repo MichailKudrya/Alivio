@@ -1,0 +1,147 @@
+:root {
+    /*fonts*/
+    --font-main: 'Lato', sans-serif;
+    --font-add: 'Raleway', sans-serif;
+    /*theme colors*/
+    --color-main: #01996D;
+    --color-nav: #292929;
+    --color-text: #484848;
+    --color-text-how: #424242;
+    --color-bg: #245852;
+    --color-border: #D6D6D6;
+    /*conts colors*/
+    --color-black: #000;
+    --color-white: #fff;
+    /*radius*/
+    --b-radius: 12px;
+    --b-radius-btn: 4px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-main);
+}
+
+.container {
+    max-width: 1547px;
+    padding: 0 20px;
+    width: 100%;
+    margin-inline: auto;
+}
+
+.pd-x {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.title-primary {
+    font-family: var(--font-add);
+    font-weight: 700;
+    font-size: 65px;
+    line-height: 74px;
+    color: var(--color-main);
+}
+
+.title-secondary {
+    font-family: var(--font-add);
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 157%;
+    color: var(--color-main);
+}
+
+.title-secondary.title-secondary_white {
+    color: var(--color-white);
+}
+
+.text-primary {
+    font-family: var(--font-main);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 31px;
+    color: var(--color-text);
+}
+
+.text-secondary {
+    font-family: var(--font-main);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--color-text-how);
+}
+
+.header {
+    background: var(--color-white);
+    padding: 25px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {}
+
+.headev__nav {}
+
+.header__buttons {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+
+
+.nav {}
+
+.nav__ul {
+    display: flex;
+    align-items: center;
+    gap: 72px;
+    margin: 0;
+}
+
+.nav__li {
+    list-style: none;
+}
+
+.nav__a {
+    text-decoration: none;
+    color: var(--color-nav);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+
+
+.btn {
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    border-radius: var(--b-radius-btn);
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    cursor: pointer;
+}
+
+.btn_link {
+    color: var(--color-black);
+}
+
+.btn_primary {
+    padding: 13px 50px;
+    background: var(--color-main);
+    border: 1px solid var(--color-main);
+    color: var(--color-white);
+}
