@@ -20,10 +20,12 @@
 * {
     box-sizing: border-box;
 }
-
 body {
     margin: 0;
     font-family: var(--font-main);
+}
+p {
+    margin: 0;
 }
 
 .container {
@@ -60,7 +62,6 @@ body {
 
 .text-primary {
     font-family: var(--font-main);
-    font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 31px;
@@ -87,19 +88,11 @@ body {
     justify-content: space-between;
 }
 
-.header__logo {}
-
-.headev__nav {}
-
 .header__buttons {
     display: flex;
     gap: 35px;
     align-items: center;
 }
-
-
-
-.nav {}
 
 .nav__ul {
     display: flex;
@@ -119,8 +112,6 @@ body {
     font-size: 20px;
     line-height: 25px;
 }
-
-
 
 .btn {
     display: inline-block;
@@ -144,4 +135,42 @@ body {
     background: var(--color-main);
     border: 1px solid var(--color-main);
     color: var(--color-white);
+}
+
+
+.main-screen {
+    height: 100vh;
+    margin-bottom: 170px;
+
+}
+
+.main-screen__wrapper {
+    display: flex;
+    height: 100%;
+}
+
+.main-screen__info {
+    flex: 0 1 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.main-screen__title {
+    margin-bottom: 30px;
+}
+
+.main-screen__desc {
+    margin-bottom: 53px;
+}
+
+.main-screen__btn {
+
+}
+
+.main-screen__image {
+    position: absolute;
+    right: 0;
 }
