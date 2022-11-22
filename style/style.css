@@ -16,7 +16,7 @@
     --b-radius: 12px;
     --b-radius-btn: 4px;
 }
-
+/*Globaly*/
 * {
     box-sizing: border-box;
 }
@@ -77,6 +77,8 @@ p {
     line-height: 150%;
     color: var(--color-text-how);
 }
+
+/*Globaly End*/
 
 /*Header*/
 
@@ -141,6 +143,8 @@ p {
     color: var(--color-white);
 }
 
+/*Header End*/
+
 /*Main-Screen*/
 
 .main-screen {
@@ -151,6 +155,7 @@ p {
 .main-screen__wrapper {
     display: flex;
     height: 100%;
+    position: relative;
 }
 
 .main-screen__info {
@@ -159,6 +164,7 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    z-index: 2;
 }
 
 .main-screen__title {
@@ -172,11 +178,14 @@ p {
 .main-screen__image {
     position: absolute;
     right: 0;
+    z-index: 1;
 }
 
 .main-screen__btn {
     padding: 20px 50px 20px 50px;
 }
+
+/*Main-Screen End*/
 
 /*How*/
 
@@ -221,6 +230,10 @@ p {
     color: var(--color-text-how);
 }
 
+/*How End*/
+
+/*Step*/
+
 .how-steps {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -260,6 +273,8 @@ p {
 .step__img img {
     max-width: 100%;
 }
+
+/*Step End*/
 
 /*Story*/
 
@@ -305,6 +320,8 @@ p {
     max-width: 100%;
     cursor: pointer;
 }
+
+/*Story end*/
 
 /*Product*/
 
@@ -356,6 +373,10 @@ p {
     padding: 20px 50px 20px 50px;
 }
 
+/*Product End*/
+
+/*Footer*/
+
 .footer {
     background: var(--color-bg);
     padding: 95px 0 83px 0;
@@ -368,6 +389,7 @@ p {
 }
 
 .footer__ul {
+    padding: 0;
     display: flex;
     gap: 60px;
 }
@@ -383,4 +405,130 @@ p {
     font-size: 25px;
     line-height: 30px;
     color: var(--color-white);
+}
+
+/*Footer End*/
+
+
+/*Breakpoint XL*/
+
+@media (max-width:1200px) {
+    /*Header*/
+    .header__nav {
+        display: none;
+    }
+    .header>.container>.pd-x {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    /*Main-Screen*/
+    .main-screen__title, .main-screen__desc {
+        background-color: rgba(225, 225, 225, 0.5);
+        padding: 7px;
+        border-radius: var(--b-radius);
+    }
+    .main-screen__image, .main-screen__image img {
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .main-screen {
+        margin-bottom: 50px;
+    }
+    /*How*/
+    .how-header {
+        grid-template-areas: "title"
+                             "word"
+                             "desc";
+    }
+    .how-header__word {
+        margin-bottom: 20px;
+    }
+    .how-steps {
+        grid-template-columns: 1fr;
+    }
+    .how-header__desc {
+        max-width: 100%;
+    }
+    .how {
+        margin-top: 50px;
+        padding-bottom: 150px;
+    }
+    .step__desc {
+        max-width: 100%;
+    }
+    .step__img {
+        max-width: 100%;
+    }
+    .step__img img {
+        width: 100%;
+        max-height: 370px;
+        object-fit: cover;
+        border-radius: var(--b-radius);
+    }
+    /*Story*/
+    .story {
+        padding: 159px 20px 126px 20px;
+    }
+    .story__wrapper {
+        flex-direction: column;
+    }
+    .story__info {
+        flex: 1 1 100%;
+    }
+    .story__video {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        border-radius: var(--b-radius);
+    }
+    /*Product*/
+    .product {
+        padding: 80px 20px 100px 20px;
+    }
+    .pruduct__wrapper {
+        flex-direction: column;
+    }
+    .product__info {
+        flex: 1 1 100%;
+    }
+    .product__img img {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        border-radius: var(--b-radius);
+    }
+    /*Footer*/
+    .footer {
+        padding-top: 70px;
+        padding-bottom: 50px;
+    }
+    .footer__wrapper {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .footer__ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    .footer__a {
+        font-weight: 400;
+    }
+}
+@media (max-width:540px){
+    .header__buttons {
+        display: none;
+    }
+    .story__wrapper, .pruduct__wrapper {
+        text-align: center;
+    }
+    .btn, .product__btn a {
+        margin: 0 auto;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    
 }
