@@ -409,6 +409,66 @@ p {
 
 /*Footer End*/
 
+/*Burger*/
+.burger-box {
+    display: none;
+    width: 150px;
+    height: 50px;
+    position: relative;
+    color: var(--color-main);
+}
+
+#check-menu {
+    display: none;
+}
+label {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.burger-line {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 40px;
+    height: 3px;
+    background: var(--color-main);   
+    transition: .5s all ease-in-out;
+}
+.second, .third {
+    top: 22px;
+}
+.fourth {
+    top: 40px;
+}
+
+#check-menu:checked ~ .main-menu {
+    max-height: 200px;
+    font-size: 16px;
+}
+
+#check-menu:checked ~ .first{
+    display: none;
+}
+
+#check-menu:checked ~ .second{
+    transform: rotate(45deg);
+}
+
+#check-menu:checked ~ .third{
+    transform: rotate(-45deg);
+}
+
+#check-menu:checked ~ .fourth{
+    display: none;
+}
+
 
 /*Breakpoint XL*/
 
@@ -530,5 +590,36 @@ p {
         text-align: center;
         align-items: center;
     }
-    
+    .burger-box {
+        display: block;
+    }
+    .main-menu {
+        display: block;
+        position: absolute;
+        max-width: 150px;
+        width: 100%;
+        bottom: 0;
+        right: 0;
+        transform: translateY(100%);
+        z-index: 6;
+        max-height: 0;
+        font-size: 0;
+        overflow: hidden;
+        transition: .8s all ease-in-out;
+    }
+    .nav__ul {
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+        width: 100%;
+        border-radius: var(--b-radius);
+        background: var(--color-white);
+    }
+    .nav__li a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        
+    }
 }
