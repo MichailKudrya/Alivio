@@ -130,10 +130,23 @@ p {
     font-size: 20px;
     line-height: 25px;
     cursor: pointer;
+    transition: .2s all ease-in-out;
+}
+
+.btn:hover {
+    background: #424242;
+    transform: translateY(-10px);
+}
+
+.btn_link:hover {
+    color: var(--color-white);
+    background: var(--color-main);
+    
 }
 
 .btn_link {
     color: var(--color-black);
+    padding: 15px 20px;
 }
 
 .btn_primary {
